@@ -4,10 +4,11 @@ Hi! I'm Atta, a web developer & programmer. Here are some projects I've built.
 
 ## Skills
 
-- C, C++, HTML, CSS, JavaScript
-- React, Python, Flask
-- MySQL, MongoDB
-- Git, GitHub
+- Programming: C, C++
+- Frontend: HTML, CSS, JavaScript, React
+- Backend: Python, Flask
+- Databases: MySQL, MongoDB
+- Tools: Git, GitHub
 
 ## Projects
 
@@ -19,5 +20,6 @@ Hi! I'm Atta, a web developer & programmer. Here are some projects I've built.
 
 ## Contact
 
+- Location: Sialkot, Punjab, Pakistan
 - Email: mughalatta022@gmail.com
 - LinkedIn: https://linkedin.com/in/attarehman962
