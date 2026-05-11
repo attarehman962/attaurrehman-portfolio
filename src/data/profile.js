@@ -6,6 +6,7 @@ export const profile = {
   email: 'attaurrehman.builds@gmail.com',
   github: 'https://github.com/attarehman962',
   linkedin: 'https://www.linkedin.com/in/attaurrehman962/',
+  portfolio: 'https://attaurrehman-portfolio-p.netlify.app/',
   summary:
     'I build secure, database-driven full-stack applications with React frontends, FastAPI backends, REST APIs, authentication systems, relational databases, and clean project architecture.',
   about: [
@@ -57,6 +58,10 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
+  {
+    label: 'Live Portfolio',
+    href: profile.portfolio
+  },
   {
     label: 'GitHub',
     href: profile.github

@@ -61,7 +61,7 @@ function Hero({ theme }) {
                 <Button
                   key={link.label}
                   href={link.href}
-                  variant={index === socialLinks.length - 1 ? 'secondary' : 'ghost'}
+                  variant={index === 0 || index === socialLinks.length - 1 ? 'secondary' : 'ghost'}
                   download={link.download}
                 >
                   {link.label}

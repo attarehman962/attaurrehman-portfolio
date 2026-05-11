@@ -45,19 +45,6 @@ This portfolio presents Atta Ur Rehman as a full stack developer focused on:
 - User Management System
 - Digital Logics Studio
 
-## Local Development
-
-```bash
-npm install
-npm run dev
-```
-
-## Build
-
-```bash
-npm run build
-```
-
 ## Contact
 
 - Email: attaurrehman.builds@gmail.com
