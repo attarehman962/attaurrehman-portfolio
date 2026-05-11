@@ -1,25 +1,39 @@
 # Atta Ur Rehman Portfolio
 
-Hi! I'm Atta, a web developer & programmer. Here are some projects I've built.
+A premium recruiter-focused developer portfolio built with React, Vite, Tailwind CSS, and Framer Motion.
 
-## Skills
+## Stack
 
-- Programming: C, C++
-- Frontend: HTML, CSS, JavaScript, React
-- Backend: Python, Flask
-- Databases: MySQL, MongoDB
-- Tools: Git, GitHub
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
 
-## Projects
+## Positioning
 
-### Project 1: Personal Website
+This portfolio presents Atta Ur Rehman as a full stack developer focused on:
 
-- **Description:** A portfolio website with home, about, and contact pages
-- **Tech Used:** HTML, CSS, JS
-- **Live Demo:** [Click Here](https://attarehman962.github.io/attaurrehman-portfolio/)
+- React frontend architecture
+- FastAPI and Flask backend development
+- Authentication systems and protected routes
+- PostgreSQL, MySQL, and SQLite database workflows
+- Dashboard-style full stack applications
+
+## Featured Projects
+
+- DocMate
+- User Management System
+- Digital Logics Studio
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
 
 ## Contact
 
-- Location: Sialkot, Punjab, Pakistan
-- Email: mughalatta022@gmail.com
-- LinkedIn: https://linkedin.com/in/attarehman962
+- Email: attaurrehman.builds@gmail.com
+- GitHub: https://github.com/attarehman962
+- LinkedIn: https://www.linkedin.com/in/attaurrehman962/
