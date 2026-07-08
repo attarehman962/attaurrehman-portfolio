@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Atta Ur Rehman',
   role: 'Python Backend Developer',
-  headline: 'Python Backend Developer — Automation & Security Tooling.',
+  headline: 'Python Backend Developer | FastAPI & PostgreSQL | Automation & Web Scraping | Security Tools',
   stack: 'FastAPI · PostgreSQL · Docker · CI/CD',
   education: "FAST-NUCES '26",
   email: 'attaurrehman.builds@gmail.com',
