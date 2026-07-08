@@ -1,57 +1,60 @@
 export const profile = {
   name: 'Atta Ur Rehman',
-  role: 'Full Stack Developer',
-  stack: 'React · FastAPI · PostgreSQL',
+  role: 'Python Backend Developer',
+  headline: 'Python Backend Developer — Automation & Security Tooling.',
+  stack: 'FastAPI · PostgreSQL · Docker · CI/CD',
   education: "FAST-NUCES '26",
   email: 'attaurrehman.builds@gmail.com',
   github: 'https://github.com/attarehman962',
   linkedin: 'https://www.linkedin.com/in/attaurrehman962/',
   portfolio: 'https://attaurrehman-portfolio-p.netlify.app/',
+  flagshipRepo: 'https://github.com/attarehman962/security-misconfiguration-scanner',
   summary:
-    'I build secure, database-driven full-stack applications with React frontends, FastAPI backends, REST APIs, authentication systems, relational databases, and clean project architecture.',
+    'I build backend systems that replace manual work with automated, tested tools — including a security misconfiguration scanner with JWT-authenticated FastAPI APIs, PostgreSQL-backed scan history, and full CI/CD.',
   about: [
-    'Atta Ur Rehman is a Full Stack Developer and BS Computer Science student at FAST-NUCES, focused on building secure, database-driven web applications that balance product usability with maintainable architecture.',
-    'His work spans React frontends, FastAPI and Flask backends, API design, authentication systems, protected routes, role-based access control, CRUD dashboards, and relational database design with PostgreSQL, MySQL, and SQLite.',
-    'The emphasis is practical engineering: clear separation between frontend and backend layers, validated APIs, reliable database workflows, and systems that are ready for internships, recruiter review, and client-facing delivery.'
+    'BSCS student at FAST-NUCES focused on Python backend development, automation, and security tooling.',
+    'Currently interning as a Software Developer at QuantumLogicsLabs, building FastAPI/Flask APIs and React-integrated features.',
+    'Most interested in systems that turn manual, error-prone processes into reliable automated tools.'
   ],
   highlights: [
     {
-      label: 'Primary Focus',
-      value: 'Full-stack systems'
+      label: 'Positioning',
+      value: 'Automation & security tooling'
     },
     {
       label: 'Backend Strength',
-      value: 'Auth, APIs, databases'
+      value: 'FastAPI, auth, databases'
     },
     {
       label: 'Availability',
-      value: 'Internships and freelance'
+      value: 'Full-time and junior roles'
     }
   ],
   heroFacts: [
-    'React interfaces with reusable component architecture',
-    'FastAPI services with validation, JWT auth, and clean endpoints',
-    'Relational database design using PostgreSQL, MySQL, and SQLite'
+    'Python',
+    'FastAPI',
+    'PostgreSQL',
+    'Docker',
+    'Automation'
   ],
   quickStats: [
     {
-      value: '3',
-      label: 'Featured projects'
+      value: '4',
+      label: 'Proof areas'
     },
     {
-      value: 'JWT',
-      label: 'Authentication workflows'
+      value: 'FastAPI',
+      label: 'Primary backend stack'
     },
     {
-      value: 'RBAC',
-      label: 'Protected admin systems'
+      value: 'Open',
+      label: 'Internships and junior roles'
     }
   ]
 };
 
 export const navLinks = [
   { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' }
@@ -59,33 +62,48 @@ export const navLinks = [
 
 export const socialLinks = [
   {
-    label: 'Live Portfolio',
-    href: profile.portfolio
+    label: 'View Flagship Project',
+    href: profile.flagshipRepo
   },
   {
-    label: 'GitHub',
-    href: profile.github
-  },
-  {
-    label: 'LinkedIn',
-    href: profile.linkedin
-  },
-  {
-    label: 'Email Me',
-    href: `mailto:${profile.email}`
-  },
-  {
-    label: 'Download Resume',
+    label: 'Resume',
     href: '/resume.pdf',
     download: true
+  },
+  {
+    label: 'Contact Me',
+    href: `mailto:${profile.email}`
   }
 ];
 
 export const focusObject = {
-  full_stack: 'React + FastAPI applications',
-  backend: 'REST APIs, authentication flows, protected routes',
-  database: 'PostgreSQL, SQLAlchemy, migrations',
-  security: 'JWT, password hashing, RBAC',
-  frontend: 'Reusable UI, routing, responsive layouts',
-  growth: 'Internship-ready and freelance-ready engineering'
+  backend: 'FastAPI APIs, validation, auth, protected routes',
+  automation: 'Security checks, scraping workflows, scheduled jobs',
+  database: 'PostgreSQL, SQLAlchemy, Alembic migrations',
+  security: 'JWT, password hashing, CORS, headers, severity scoring',
+  delivery: 'Docker Compose, pytest, GitHub Actions',
+  growth: 'Backend, automation, and security tooling roles'
 };
+
+export const proofCards = [
+  {
+    title: 'FastAPI Backends',
+    copy: 'Validated APIs, JWT auth, background work, and clean endpoint structure.',
+    href: profile.flagshipRepo
+  },
+  {
+    title: 'PostgreSQL + SQLAlchemy',
+    copy: 'Relational schemas, migrations, scan history, and persistent product workflows.',
+    href: 'https://github.com/attarehman962/User_Management'
+  },
+  {
+    title: 'Security Automation',
+    copy: 'Automated checks for missing headers, weak CORS, exposed files, and SSL issues.',
+    href: profile.flagshipRepo
+  },
+  {
+    title: 'Scraping + Reports',
+    copy: 'Python automation that turns raw checks into scannable findings and reports.',
+    href: profile.flagshipRepo
+  }
+];

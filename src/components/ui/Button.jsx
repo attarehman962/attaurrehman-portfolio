@@ -7,14 +7,14 @@ function Button({
 }) {
   const variants = {
     primary:
-      'bg-text text-background hover:bg-secondary hover:text-background border-text',
+      'bg-accent text-white hover:bg-text hover:text-background border-accent',
     secondary:
-      'bg-transparent text-text hover:bg-text/5 border-border',
+      'bg-surface text-text hover:bg-elevated border-border',
     ghost:
-      'bg-transparent text-secondary hover:bg-text/5 hover:text-text border-transparent'
+      'bg-transparent text-secondary hover:bg-elevated hover:text-text border-transparent'
   };
 
-  const sharedClassName = `inline-flex w-full items-center justify-center rounded-full border px-5 py-3 text-sm font-medium transition duration-200 sm:w-auto ${variants[variant]} ${className}`;
+  const sharedClassName = `inline-flex w-full items-center justify-center rounded-md border px-5 py-3 text-sm font-semibold transition duration-200 sm:w-auto ${variants[variant]} ${className}`;
 
   if (href) {
     const openInNewTab = href.startsWith('http');

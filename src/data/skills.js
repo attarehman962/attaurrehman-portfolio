@@ -1,34 +1,34 @@
 export const skillGroups = [
   {
-    title: 'Frontend',
-    description: 'Responsive interfaces, routing, API-driven UI flows, and reusable component systems.',
-    skills: ['React', 'Vite', 'JavaScript ES6+', 'Tailwind CSS', 'HTML5', 'CSS3', 'React Router DOM', 'Axios']
-  },
-  {
     title: 'Backend',
-    description: 'Python-based services with validated data models, structured APIs, and authentication workflows.',
-    skills: ['Python', 'FastAPI', 'Flask', 'REST APIs', 'SQLAlchemy', 'Pydantic', 'JWT Authentication']
+    description: 'Python services with validated data models, structured APIs, and authentication workflows.',
+    skills: ['Python', 'FastAPI', 'Flask', 'REST API Design', 'SQLAlchemy', 'Pydantic', 'Alembic', 'JWT Authentication']
   },
   {
-    title: 'Databases',
+    title: 'Automation/Scraping',
+    description: 'Tools that replace repetitive manual checks with repeatable scripts, scans, and exports.',
+    skills: ['HTTPX', 'BeautifulSoup', 'Playwright', 'CSV Export', 'PDF Reports', 'CLI Tools']
+  },
+  {
+    title: 'Database',
     description: 'Relational schema design, data persistence, and practical query-driven application development.',
-    skills: ['PostgreSQL', 'MySQL', 'SQLite']
+    skills: ['PostgreSQL', 'SQLite', 'MySQL', 'Migrations', 'Query Design']
   },
   {
-    title: 'Tools',
-    description: 'Version control, migration workflows, development tooling, and local environment discipline.',
-    skills: ['Git', 'GitHub', 'Docker', 'VS Code', 'Alembic', 'CLI']
+    title: 'DevOps',
+    description: 'Containerized local development, CI feedback, and test discipline for backend projects.',
+    skills: ['Docker', 'Docker Compose', 'GitHub Actions', 'pytest', 'Ruff', 'mypy', 'Git']
   }
 ];
 
 export const coreConcepts = [
-  'CRUD Applications',
-  'Admin Dashboards',
+  'Security Scanning',
+  'Background Jobs',
+  'Severity Scoring',
+  'Authenticated APIs',
+  'Scan History',
   'RBAC',
-  'API Integration',
-  'Authentication Systems',
-  'Protected Routes',
   'Database Design',
-  'Backend Validation',
-  'Password Hashing'
+  'Report Export',
+  'CI Pipelines'
 ];

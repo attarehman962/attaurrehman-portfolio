@@ -10,101 +10,107 @@ function Projects() {
     <Section
       id="projects"
       eyebrow="Projects"
-      title="Featured builds with real engineering depth."
-      description="Each project is framed around architecture, security, data workflows, and practical product execution rather than beginner-level showcase copy."
+      title="Case studies built around problems, not buzzwords."
+      description="The lead project is security automation; the supporting work shows authenticated backends, data workflows, and product delivery."
     >
       <div className="grid gap-5 sm:gap-6">
         {projects.map((project, index) => (
           <Reveal key={project.title} delay={index * 0.08}>
-            <Card hover className="overflow-hidden p-0">
-              <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
-                <div className="space-y-6 p-5 sm:p-8">
-                  <div className="space-y-4">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <p className="font-mono text-xs uppercase tracking-[0.24em] text-muted">
-                        0{index + 1}
-                      </p>
-                      <span className="rounded-full border border-border bg-text/5 px-3 py-1 text-xs text-secondary">
-                        {project.subtitle}
-                      </span>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-semibold text-text sm:text-3xl">
-                        {project.title}
-                      </h3>
-                      <p className="mt-3 max-w-2xl text-sm leading-8 text-secondary sm:text-base">
-                        {project.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((item) => (
-                      <Badge key={item}>{item}</Badge>
-                    ))}
-                  </div>
-
-                  <div className="grid gap-6 lg:grid-cols-2">
-                    <div>
-                      <p className="font-mono text-xs uppercase tracking-[0.24em] text-muted">
-                        Key features
-                      </p>
-                      <div className="mt-4 space-y-3">
-                        {project.features.map((feature) => (
-                          <div key={feature} className="flex gap-3 text-sm leading-7 text-secondary">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-text" />
-                            <span>{feature}</span>
-                          </div>
-                        ))}
+            <div id={project.id} className="scroll-mt-28">
+              <Card hover className={`overflow-hidden p-0 ${index === 0 ? 'border-accent/45' : ''}`}>
+                <div className="grid gap-0 lg:grid-cols-[1.12fr_0.88fr]">
+                  <div className="space-y-6 p-5 sm:p-8">
+                    <div className="space-y-4">
+                      <div className="flex flex-wrap items-center gap-3">
+                        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
+                          0{index + 1}
+                        </p>
+                        <span className="rounded-md border border-border bg-background px-3 py-1 text-xs font-medium text-secondary">
+                          {project.subtitle}
+                        </span>
+                        {index === 0 ? (
+                          <span className="rounded-md bg-accent px-3 py-1 text-xs font-semibold text-white">
+                            Flagship
+                          </span>
+                        ) : null}
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-semibold text-text sm:text-3xl">
+                          {project.title}
+                        </h3>
+                        <p className="mt-3 max-w-2xl text-sm leading-8 text-secondary sm:text-base">
+                          {project.description}
+                        </p>
                       </div>
                     </div>
 
-                    <div>
-                      <p className="font-mono text-xs uppercase tracking-[0.24em] text-muted">
-                        Engineering highlights
+                    <div className="grid gap-4">
+                      {[
+                        ['Problem', project.problem],
+                        ['Approach', project.approach],
+                        ['Result', project.result]
+                      ].map(([label, copy]) => (
+                        <div key={label} className="grid gap-2 border-l-2 border-accent/35 pl-4 sm:grid-cols-[7rem_1fr] sm:gap-4">
+                          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            {label}
+                          </p>
+                          <p className="text-sm leading-7 text-secondary">{copy}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((item) => (
+                        <Badge key={item}>{item}</Badge>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-3">
+                      <Button href={project.github} className="sm:min-w-[11rem]">
+                        Repository
+                      </Button>
+                      <Button href={project.live} variant="secondary" className="sm:min-w-[9rem]">
+                        Demo / Details
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-border bg-background p-5 sm:p-8 lg:border-l lg:border-t-0">
+                    <div className="mb-6">
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        Evidence
                       </p>
-                      <div className="mt-4 space-y-3">
-                        {project.engineering.map((item) => (
-                          <div key={item} className="flex gap-3 text-sm leading-7 text-secondary">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-text" />
-                            <span>{item}</span>
-                          </div>
-                        ))}
+                      <h4 className="mt-3 text-xl font-semibold text-text">{project.summary}</h4>
+                    </div>
+
+                    {index === 0 ? (
+                      <div className="mb-6 flex min-h-40 items-center justify-center border border-dashed border-border bg-surface p-5 text-center">
+                        <p className="text-sm leading-6 text-muted">
+                          Screenshot / demo GIF placeholder
+                        </p>
                       </div>
-                    </div>
-                  </div>
+                    ) : null}
 
-                  <div className="flex flex-wrap gap-3">
-                    <Button href={project.github} className="sm:min-w-[11rem]">
-                      GitHub Repository
-                    </Button>
-                    <Button href={project.live} variant="secondary" className="sm:min-w-[9rem]">
-                      Live Demo
-                    </Button>
-                  </div>
-                </div>
-
-                <div className="border-t border-border bg-background/70 p-5 sm:p-8 lg:border-l lg:border-t-0">
-                  <div className="rounded-3xl border border-border bg-background/80 p-5 font-mono text-sm text-secondary">
-                    <div className="mb-5 flex items-center gap-2">
-                      <span className="h-2.5 w-2.5 rounded-full bg-text/60" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-text/35" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-text/20" />
-                    </div>
-                    <p className="mb-4 text-xs uppercase tracking-[0.24em] text-muted">
-                      {project.summary}
-                    </p>
                     <div className="space-y-3">
+                      {project.proof.map((item) => (
+                        <div key={item} className="flex gap-3 text-sm leading-7 text-secondary">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-7 border border-border bg-surface p-4 font-mono text-xs text-secondary">
                       {project.preview.map((line) => (
-                        <p key={line} className="break-words leading-7">
+                        <p key={line} className="break-words leading-6">
                           {line}
                         </p>
                       ))}
                     </div>
                   </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           </Reveal>
         ))}
       </div>

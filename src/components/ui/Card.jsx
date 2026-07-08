@@ -13,7 +13,7 @@ function Card({ children, className = '', hover = false }) {
 
   return (
     <motion.div
-      whileHover={{ y: -6, scale: 1.01 }}
+      whileHover={{ y: -4 }}
       transition={{ duration: 0.22, ease: 'easeOut' }}
     >
       {content}

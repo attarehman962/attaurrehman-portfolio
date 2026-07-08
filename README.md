@@ -1,6 +1,6 @@
 # Atta Ur Rehman Portfolio
 
-A premium recruiter-focused full-stack developer portfolio built with React, Vite, Tailwind CSS, and Framer Motion.
+A recruiter-focused backend portfolio built with React, Vite, Tailwind CSS, and Framer Motion.
 
 ## Live Preview
 
@@ -10,7 +10,7 @@ https://attaurrehman-portfolio-p.netlify.app/
 
 ## Overview
 
-This website was redesigned to present Atta Ur Rehman as a serious full-stack developer with strong frontend execution, backend depth, and production-minded engineering direction.
+This website presents Atta Ur Rehman as a Python Backend Developer focused on automation, security tooling, FastAPI APIs, PostgreSQL-backed platforms, Docker, testing, and CI/CD.
 
 ## Stack
 
@@ -21,19 +21,24 @@ This website was redesigned to present Atta Ur Rehman as a serious full-stack de
 
 ## Positioning
 
-This portfolio presents Atta Ur Rehman as a full stack developer focused on:
+This portfolio presents Atta Ur Rehman as:
 
-- React frontend architecture
+Python Backend Developer - Automation & Security Tooling
+
+Focus areas:
+
 - FastAPI and Flask backend development
-- Authentication systems and protected routes
-- PostgreSQL, MySQL, and SQLite database workflows
-- Dashboard-style full stack applications
+- Automation and security scanning workflows
+- Authentication systems, protected routes, and RBAC
+- PostgreSQL, SQLAlchemy, and Alembic workflows
+- Docker, pytest, Ruff, mypy, and GitHub Actions
+- React interfaces as supporting product delivery
 
 ## Sections
 
 - Hero
 - About
-- Skills and Technologies
+- Stack
 - Featured Projects
 - Experience
 - Current Focus
@@ -41,8 +46,9 @@ This portfolio presents Atta Ur Rehman as a full stack developer focused on:
 
 ## Featured Projects
 
+- Security Misconfiguration Scanner
+- Mini BEAMS360 Admissions CRM
 - DocMate
-- User Management System
 - Digital Logics Studio
 
 ## Contact

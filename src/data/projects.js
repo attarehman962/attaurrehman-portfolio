@@ -1,88 +1,106 @@
 export const projects = [
   {
-    title: 'DocMate',
-    subtitle: 'Full Stack PDF Workspace',
-    summary:
-      'A document workflow platform for processing, transforming, extracting, and summarizing PDFs through a React frontend and FastAPI backend.',
+    id: 'project-security-misconfiguration-scanner',
+    title: 'Security Misconfiguration Scanner',
+    subtitle: 'Flagship backend project',
+    summary: 'FastAPI security automation platform',
     description:
-      'DocMate is a full-stack PDF processing platform supporting merge, split, compress, rotate, watermark, file conversion, text extraction, OCR fallback for scanned documents, multilanguage translation, and AI-based document summarization workflow.',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'FastAPI', 'SQLAlchemy', 'SQLite / PostgreSQL', 'pypdf', 'ReportLab'],
-    features: [
-      'PDF merge, split, compress, rotate, watermark, and conversion',
-      'Text extraction plus OCR fallback for scanned documents',
-      'Multilanguage translation and AI-based summarization workflow',
-      'Secure backend file validation and structured API handling'
+      'A Python/FastAPI platform that automates security misconfiguration audits - detecting missing headers, weak CORS, exposed files, and SSL issues - with authenticated scans, PostgreSQL-backed history, and PDF reporting.',
+    problem:
+      'Manual header, CORS, SSL, and exposed-file checks are tedious, easy to skip, and hard to turn into repeatable audit history.',
+    approach:
+      'Built a JWT-auth FastAPI backend with background scan jobs, PostgreSQL scan history, severity scoring, CLI output, PDF reports, CSV export, Docker Compose, and CI checks.',
+    result:
+      'Turns manual misconfiguration review into a repeatable scanner with 10+ automated checks, API and CLI access, stored results, and actionable findings.',
+    tech: [
+      'Python',
+      'FastAPI',
+      'PostgreSQL',
+      'SQLAlchemy',
+      'Alembic',
+      'JWT',
+      'Docker Compose',
+      'pytest',
+      'Ruff',
+      'mypy',
+      'GitHub Actions'
     ],
-    engineering: [
-      'Clear separation between React client and FastAPI services',
-      'Secure document processing pipeline with server-side validation',
-      'Database-driven architecture for workflow management'
+    proof: [
+      'JWT-authenticated scan workflows',
+      'Background processing for longer audits',
+      'PostgreSQL-backed scan history and severity scoring',
+      'PDF reports, CSV export, and CLI table/JSON output'
     ],
-    preview: [
-      '$ docmate process invoice-batch/',
-      '> validating uploads',
-      '> extracting text and OCR fallback',
-      '> translation job queued',
-      '> summary generated and persisted'
-    ],
-    github: 'https://github.com/attarehman962/DocMate',
-    live: 'https://docmate-pagebuddy.netlify.app/'
+    preview: ['POST /scans', 'queue background audit', 'run 10+ checks', 'store findings', 'export PDF / CSV'],
+    github: 'https://github.com/attarehman962/security-misconfiguration-scanner',
+    live: 'https://github.com/attarehman962/security-misconfiguration-scanner'
   },
   {
-    title: 'User Management System',
-    subtitle: 'Secure Full Stack Admin Dashboard',
-    summary:
-      'A role-based admin system designed around protected CRUD operations, backend permission enforcement, and maintainable database workflows.',
+    title: 'Mini BEAMS360 Admissions CRM',
+    subtitle: 'EdTech CRM backend',
+    summary: 'Admissions workflow system',
     description:
-      'A secure role-based user management system with protected CRUD operations, backend-enforced permissions, JWT authentication, PostgreSQL migrations, and tested backend functionality.',
-    tech: ['FastAPI', 'React', 'Vite', 'PostgreSQL', 'SQLAlchemy', 'JWT', 'Alembic'],
-    features: [
-      'Role-based admin dashboard with protected CRUD operations',
-      'Backend permission checks and HS256 JWT authentication',
-      'PBKDF2-SHA256 password hashing and migration workflows',
-      'Unit testing against SQLite for backend logic validation'
+      'A React/FastAPI/PostgreSQL CRM for admissions teams with JWT authentication, RBAC, dashboards, lead tracking, and database-backed workflows.',
+    problem:
+      'Admissions teams need a clear way to track leads, protect staff-only actions, and turn scattered follow-ups into a predictable workflow.',
+    approach:
+      'Designed protected CRM flows with FastAPI endpoints, PostgreSQL persistence, role-based access control, and React dashboards for daily operations.',
+    result:
+      'Provides a practical admissions dashboard with lead tracking, authenticated user flows, backend permission checks, and structured data management.',
+    tech: ['FastAPI', 'React', 'PostgreSQL', 'SQLAlchemy', 'Alembic', 'JWT', 'RBAC', 'Tailwind CSS'],
+    proof: [
+      'JWT login and protected routes',
+      'Role-based access for admin workflows',
+      'Lead tracking and dashboard views',
+      'PostgreSQL schema design with migration discipline'
     ],
-    engineering: [
-      'API-level authentication and authorization boundaries',
-      'Maintainable PostgreSQL schema migrations with Alembic',
-      'Practical admin dashboard architecture for real user workflows'
-    ],
-    preview: [
-      'POST /auth/login',
-      '{ "role": "admin", "permissions": ["create", "update", "delete"] }',
-      'GET /users?status=active',
-      'PATCH /users/:id',
-      '403 responses enforced server-side when scope is missing'
-    ],
+    preview: ['POST /auth/login', 'GET /leads', 'PATCH /leads/:id', 'check role scope', 'update dashboard'],
     github: 'https://github.com/attarehman962/User_Management',
     live: 'https://user-management-p.netlify.app/'
   },
   {
-    title: 'Digital Logics Studio',
-    subtitle: 'Interactive Learning Platform',
-    summary:
-      'An API-driven React learning platform for digital logic education with route-based modules, simulations, and persistent authentication handling.',
+    title: 'DocMate',
+    subtitle: 'Document automation workspace',
+    summary: 'PDF processing pipeline',
     description:
-      'A React-based interactive learning platform for digital logic concepts, including Circuit Forge, K-Map Studio, Boolean algebra, number systems, arithmetic circuits, memory, and sequential logic concepts.',
-    tech: ['React 18', 'React Router DOM', 'Axios', 'CSS', 'REST API'],
-    features: [
-      'Circuit Forge simulation tools and K-Map Studio workflows',
+      'A PDF automation workspace for file operations, extraction, OCR fallback, translation, and summarization through a React frontend and FastAPI backend.',
+    problem:
+      'Document work often jumps between separate tools for merging, splitting, extracting, translating, and summarizing files.',
+    approach:
+      'Built a single FastAPI-backed workflow with secure upload validation, PDF transformations, text extraction, OCR fallback, and AI-assisted summarization.',
+    result:
+      'Combines 8+ file operations with a structured document pipeline so users can process, extract, and summarize PDFs in one place.',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'FastAPI', 'SQLAlchemy', 'SQLite / PostgreSQL', 'pypdf', 'ReportLab'],
+    proof: [
+      'Merge, split, compress, rotate, watermark, and conversion workflows',
+      'Text extraction with OCR fallback for scanned documents',
+      'Translation and summarization pipeline',
+      'Server-side file validation and API structure'
+    ],
+    preview: ['validate upload', 'extract text', 'fallback OCR', 'summarize content', 'persist result'],
+    github: 'https://github.com/attarehman962/DocMate',
+    live: 'https://docmate-pagebuddy.netlify.app/'
+  },
+  {
+    title: 'Digital Logics Studio',
+    subtitle: 'Interactive learning product',
+    summary: 'React education platform',
+    description:
+      'An API-driven React learning platform for digital logic education with route-based modules, simulations, and persistent authentication handling.',
+    problem:
+      'Digital logic students need more than static notes; they need interactive modules that make circuits, K-maps, and truth tables easier to practice.',
+    approach:
+      'Built route-based React modules, API-driven data flows, persistent sessions, and simulation-oriented UI patterns for learning workflows.',
+    result:
+      'Delivers a structured learning product with circuit tools, K-Map workflows, authentication, and reusable frontend architecture.',
+    tech: ['React 18', 'React Router DOM', 'Axios', 'REST API', 'CSS'],
+    proof: [
+      'Circuit Forge simulation tools and K-Map workflows',
       'Topic pages for Boolean algebra, number systems, memory, and sequential logic',
       'Login, signup, logout, and persistent session restoration',
-      'API-driven frontend with Axios and structured client routing'
+      'API-driven frontend with Axios and structured routing'
     ],
-    engineering: [
-      'Interactive frontend modules with route-based educational structure',
-      'Persistent authentication handling across the React client',
-      'Simulation-oriented UX for learning complex logic concepts'
-    ],
-    preview: [
-      'router.navigate("/labs/kmap-studio")',
-      'session.restore() -> authenticated',
-      'axios.get("/api/circuits/templates")',
-      'render(<TruthTable />)',
-      'state synchronized across learning modules'
-    ],
+    preview: ['navigate /labs/kmap-studio', 'restore session', 'fetch templates', 'render truth table', 'sync state'],
     github: 'https://github.com/attarehman962/DigitalLogicsStudio/tree/main',
     live: 'https://circuits.quantumlogicslimited.com/'
   }

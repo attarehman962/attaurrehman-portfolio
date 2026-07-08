@@ -10,15 +10,15 @@ function Focus() {
     <Section
       id="focus"
       eyebrow="Current Focus"
-      title="What Atta is sharpening right now."
-      description="This section keeps the brand practical: better APIs, stronger security flows, cleaner database work, and reusable frontend systems."
+      title="What Atta is sharpening now."
+      description="The focus stays narrow: backend systems that automate manual work and make security checks easier to repeat."
     >
       <Reveal>
         <Card className="overflow-hidden p-0">
           <div className="border-b border-border px-5 py-4">
             <div className="flex items-center justify-between gap-3">
               <p className="font-mono text-xs uppercase tracking-[0.24em] text-muted">
-                current_focus.js
+                current_focus.json
               </p>
               <p className="text-xs text-muted">{profile.role}</p>
             </div>

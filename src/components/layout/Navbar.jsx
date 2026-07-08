@@ -24,7 +24,7 @@ function Navbar({ links, theme, toggleTheme }) {
   }, []);
 
   const baseLinkClass =
-    'rounded-full px-3 py-2 text-sm text-secondary transition duration-200 hover:bg-text/5 hover:text-text';
+    'rounded-md px-3 py-2 text-sm text-secondary transition duration-200 hover:bg-elevated hover:text-text';
 
   const navColors =
     theme === 'light'
@@ -43,16 +43,16 @@ function Navbar({ links, theme, toggleTheme }) {
         <motion.nav
           initial={false}
           animate={navColors}
-          className="panel rounded-2xl px-4 py-3"
+          className="panel px-4 py-3"
         >
           <div className="flex items-center justify-between gap-4">
             <a href="#top" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-elevated font-mono text-sm text-text">
+              <div className="flex h-11 w-11 items-center justify-center rounded-md bg-accent text-sm font-semibold text-white">
                 AR
               </div>
               <div>
                 <p className="text-sm font-semibold text-text">{profile.name}</p>
-                <p className="text-xs text-muted">{profile.role}</p>
+                <p className="text-xs text-muted">Automation & Security Tooling</p>
               </div>
             </a>
 
@@ -73,13 +73,11 @@ function Navbar({ links, theme, toggleTheme }) {
             <div className="flex items-center gap-2">
               <button
                 type="button"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-elevated px-2.5 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-secondary transition hover:bg-text/5 hover:text-text sm:px-3 sm:text-xs sm:tracking-[0.22em]"
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-elevated px-2.5 py-2 text-sm text-secondary transition hover:bg-background hover:text-text sm:px-3"
                 aria-label="Toggle site theme"
                 onClick={toggleTheme}
               >
-                <span className="hidden font-mono sm:inline">
-                  {theme === 'dark' ? 'Dark' : 'Light'}
-                </span>
+                <span aria-hidden="true">{theme === 'dark' ? '☾' : '☀'}</span>
                 <span className="relative flex h-5 w-10 items-center rounded-full border border-border bg-background px-1">
                   <motion.span
                     layout
@@ -94,7 +92,7 @@ function Navbar({ links, theme, toggleTheme }) {
 
               <button
                 type="button"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-elevated text-sm text-text transition hover:bg-text/5 md:hidden"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-border bg-elevated text-sm text-text transition hover:bg-background md:hidden"
                 aria-expanded={menuOpen}
                 aria-label="Toggle navigation menu"
                 onClick={() => setMenuOpen((value) => !value)}

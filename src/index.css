@@ -3,35 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --color-background: 5 5 5;
-  --color-surface: 17 17 17;
-  --color-elevated: 22 22 22;
-  --color-border: 38 38 38;
-  --color-text: 255 255 255;
-  --color-secondary: 163 163 163;
-  --color-muted: 115 115 115;
-  --glow-rgb: 255 255 255;
-  --grid-rgb: 255 255 255;
-  --selection-rgb: 255 255 255;
-  color-scheme: dark;
+  --color-background: 246 247 244;
+  --color-surface: 255 255 255;
+  --color-elevated: 239 242 238;
+  --color-border: 210 216 207;
+  --color-text: 20 31 27;
+  --color-secondary: 77 88 83;
+  --color-muted: 112 123 117;
+  --color-accent: 20 117 87;
+  --selection-rgb: 20 117 87;
+  color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-[data-theme='light'] {
-  --color-background: 247 247 247;
-  --color-surface: 255 255 255;
-  --color-elevated: 240 240 240;
-  --color-border: 212 212 212;
-  --color-text: 10 10 10;
-  --color-secondary: 64 64 64;
-  --color-muted: 115 115 115;
-  --glow-rgb: 10 10 10;
-  --grid-rgb: 10 10 10;
-  --selection-rgb: 10 10 10;
-  color-scheme: light;
+[data-theme='dark'] {
+  --color-background: 11 14 13;
+  --color-surface: 18 23 21;
+  --color-elevated: 25 31 28;
+  --color-border: 47 58 53;
+  --color-text: 242 246 242;
+  --color-secondary: 178 188 182;
+  --color-muted: 128 141 134;
+  --color-accent: 52 177 136;
+  --selection-rgb: 52 177 136;
+  color-scheme: dark;
 }
 
 html {
@@ -61,21 +59,7 @@ img {
 }
 
 ::selection {
-  background: rgba(var(--selection-rgb), 0.14);
-}
-
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(var(--grid-rgb), 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(var(--grid-rgb), 0.05) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(circle at center, black 45%, transparent 95%);
-}
-
-.app-glow {
-  background-image:
-    radial-gradient(circle at top, rgba(var(--glow-rgb), 0.08), transparent 40%),
-    radial-gradient(circle at bottom, rgba(var(--glow-rgb), 0.04), transparent 28%);
+  background: rgba(var(--selection-rgb), 0.18);
 }
 
 .section-shell {
@@ -83,11 +67,11 @@ img {
 }
 
 .section-heading {
-  @apply mb-4 text-xs font-medium uppercase tracking-[0.28em] text-secondary;
+  @apply mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent;
 }
 
 .section-title {
-  @apply text-2xl font-semibold tracking-tight text-text sm:text-3xl lg:text-4xl;
+  @apply max-w-3xl text-2xl font-semibold leading-tight text-text sm:text-3xl lg:text-4xl;
 }
 
 .section-copy {
@@ -95,7 +79,7 @@ img {
 }
 
 .panel {
-  @apply rounded-2xl border border-border/80 bg-surface/90 shadow-panel backdrop-blur-sm sm:rounded-3xl;
+  @apply rounded-md border border-border bg-surface shadow-panel;
 }
 
 .github-widget {
@@ -113,11 +97,5 @@ img {
 ::-webkit-scrollbar-thumb {
   border: 2px solid rgb(var(--color-background));
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-}
-
-@media (max-width: 640px) {
-  .bg-grid {
-    background-size: 36px 36px;
-  }
+  background: rgba(var(--color-accent), 0.38);
 }

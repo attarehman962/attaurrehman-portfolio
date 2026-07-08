@@ -10,14 +10,15 @@ export default {
         border: 'rgb(var(--color-border) / <alpha-value>)',
         text: 'rgb(var(--color-text) / <alpha-value>)',
         secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
-        muted: 'rgb(var(--color-muted) / <alpha-value>)'
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
+        accent: 'rgb(var(--color-accent) / <alpha-value>)'
       },
       fontFamily: {
         sans: ['Inter', 'Geist', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'ui-monospace', 'monospace']
       },
       boxShadow: {
-        panel: '0 0 0 1px rgba(255,255,255,0.04), 0 24px 80px rgba(0,0,0,0.35)'
+        panel: '0 18px 45px rgba(17, 24, 39, 0.08)'
       },
       maxWidth: {
         content: '74rem'

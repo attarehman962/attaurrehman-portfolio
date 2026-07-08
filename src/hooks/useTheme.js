@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const STORAGE_KEY = 'atta-portfolio-theme';
 
 function useTheme() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem(STORAGE_KEY);

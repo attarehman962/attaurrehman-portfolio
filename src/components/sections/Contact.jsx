@@ -19,6 +19,12 @@ const contactMethods = [
     label: 'GitHub',
     value: 'github.com/attarehman962',
     href: profile.github
+  },
+  {
+    label: 'Resume',
+    value: 'Download PDF',
+    href: '/resume.pdf',
+    download: true
   }
 ];
 
@@ -27,8 +33,8 @@ function Contact() {
     <Section
       id="contact"
       eyebrow="Contact"
-      title="Available for internships, freelance projects, and full-stack development collaborations."
-      description="The closing section is built to convert recruiter, client, or collaborator interest into a direct message with minimal friction."
+      title="Open to backend, automation, and security tooling roles — full-time."
+      description="Email, GitHub, LinkedIn, and resume - the recruiter path stays short."
     >
       <div className="grid gap-5 sm:gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <Reveal>
@@ -38,21 +44,17 @@ function Contact() {
                 Reach out
               </p>
               <p className="mt-4 max-w-xl text-base leading-8 text-secondary">
-                If you are hiring for internships, reviewing student talent, or need a
-                developer who can build React frontends, FastAPI backends, authentication
-                systems, dashboards, and database-driven products, Atta is available for the
-                conversation.
+                If you are hiring for backend roles, junior Python positions, or automation-heavy
+                tooling work, Atta is available for the conversation.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <Button href={`mailto:${profile.email}`}>Email Me</Button>
-              <Button href={profile.linkedin} variant="secondary">
-                LinkedIn
+              <Button href={`mailto:${profile.email}`}>Email</Button>
+              <Button href="/resume.pdf" variant="secondary" download>
+                Resume
               </Button>
-              <Button href={profile.github} variant="ghost">
-                GitHub
-              </Button>
+              <Button href={profile.github} variant="secondary">GitHub</Button>
             </div>
           </Card>
         </Reveal>
@@ -66,6 +68,7 @@ function Contact() {
                 </p>
                 <a
                   href={method.href}
+                  {...(method.download ? { download: true } : {})}
                   {...(method.href.startsWith('http')
                     ? { target: '_blank', rel: 'noreferrer' }
                     : {})}
@@ -76,6 +79,16 @@ function Contact() {
               </Card>
             </Reveal>
           ))}
+          <Reveal delay={contactMethods.length * 0.08}>
+            <Card className="p-5 sm:p-6">
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-muted">
+                Response
+              </p>
+              <p className="mt-3 text-base font-medium text-text sm:text-lg">
+                Usually responds within 24 hours.
+              </p>
+            </Card>
+          </Reveal>
         </div>
       </div>
     </Section>
