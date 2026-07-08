@@ -43,16 +43,16 @@ function Navbar({ links, theme, toggleTheme }) {
         <motion.nav
           initial={false}
           animate={navColors}
-          className="panel px-4 py-3"
+          className="panel px-3 py-3 sm:px-4"
         >
-          <div className="flex items-center justify-between gap-4">
-            <a href="#top" className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-md bg-accent text-sm font-semibold text-white">
+          <div className="flex items-center justify-between gap-2 sm:gap-4">
+            <a href="#top" className="flex min-w-0 items-center gap-2 sm:gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-accent text-xs font-semibold text-white sm:h-11 sm:w-11 sm:text-sm">
                 AR
               </div>
-              <div>
-                <p className="text-sm font-semibold text-text">{profile.name}</p>
-                <p className="text-xs text-muted">Automation & Security Tooling</p>
+              <div className="min-w-0">
+                <p className="truncate text-sm font-semibold text-text">{profile.name}</p>
+                <p className="hidden truncate text-xs text-muted sm:block">Automation & Security Tooling</p>
               </div>
             </a>
 
@@ -70,10 +70,10 @@ function Navbar({ links, theme, toggleTheme }) {
               ))}
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex shrink-0 items-center gap-2">
               <button
                 type="button"
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-elevated px-2.5 py-2 text-sm text-secondary transition hover:bg-background hover:text-text sm:px-3"
+                className="inline-flex items-center gap-1.5 rounded-md border border-border bg-elevated px-2 py-2 text-sm text-secondary transition hover:bg-background hover:text-text sm:gap-2 sm:px-3"
                 aria-label="Toggle site theme"
                 onClick={toggleTheme}
               >

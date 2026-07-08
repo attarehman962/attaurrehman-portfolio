@@ -33,7 +33,7 @@ function About() {
     >
       <div className="grid gap-5 sm:gap-6 lg:grid-cols-[1.2fr_0.8fr]">
         <Reveal>
-          <Card className="space-y-5 p-6 sm:p-8">
+          <Card className="space-y-5 p-5 sm:p-8">
             {profile.about.map((paragraph) => (
               <p key={paragraph} className="text-sm leading-8 text-secondary sm:text-base">
                 {paragraph}
@@ -41,11 +41,11 @@ function About() {
             ))}
 
             <div className="flex flex-wrap gap-2 border-t border-border pt-5 text-sm font-medium text-secondary">
-              <span>3 shipped projects</span>
-              <span className="text-muted">·</span>
-              <span>Software Developer Intern at QuantumLogicsLabs</span>
-              <span className="text-muted">·</span>
-              <span>FAST-NUCES '26</span>
+              {['3 shipped projects', 'Software Developer Intern at QuantumLogicsLabs', "FAST-NUCES '26"].map((item) => (
+                <span key={item} className="rounded-md border border-border bg-background px-3 py-2">
+                  {item}
+                </span>
+              ))}
             </div>
 
             <div className="grid gap-3 border-t border-border pt-5 sm:grid-cols-3">
@@ -68,7 +68,7 @@ function About() {
                 <p className="font-mono text-xs uppercase tracking-[0.24em] text-muted">
                   0{index + 1}
                 </p>
-                <h3 className="mt-4 text-xl font-semibold text-text">{pillar.title}</h3>
+                <h3 className="mt-4 text-lg font-semibold text-text sm:text-xl">{pillar.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-secondary">{pillar.copy}</p>
               </Card>
             </Reveal>
@@ -82,7 +82,7 @@ function About() {
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
               Skills
             </p>
-            <h3 className="mt-3 text-xl font-semibold text-text sm:text-2xl">
+            <h3 className="mt-3 text-lg font-semibold text-text sm:text-2xl">
               Tools grouped by where they show up in the work.
             </h3>
           </div>

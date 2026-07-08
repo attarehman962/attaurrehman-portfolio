@@ -43,13 +43,13 @@ function Contact() {
               <p className="font-mono text-xs uppercase tracking-[0.24em] text-muted">
                 Reach out
               </p>
-              <p className="mt-4 max-w-xl text-base leading-8 text-secondary">
+              <p className="mt-4 max-w-xl text-sm leading-7 text-secondary sm:text-base sm:leading-8">
                 If you are hiring for backend roles, junior Python positions, or automation-heavy
                 tooling work, Atta is available for the conversation.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="grid gap-3 sm:flex sm:flex-wrap">
               <Button href={`mailto:${profile.email}`}>Email</Button>
               <Button href="/resume.pdf" variant="secondary" download>
                 Resume
@@ -72,7 +72,7 @@ function Contact() {
                   {...(method.href.startsWith('http')
                     ? { target: '_blank', rel: 'noreferrer' }
                     : {})}
-                  className="mt-3 block break-all text-base font-medium text-text transition hover:text-secondary sm:text-lg sm:break-normal"
+                  className="mt-3 block break-all text-sm font-medium text-text transition hover:text-secondary sm:text-lg sm:break-normal"
                 >
                   {method.value}
                 </a>
@@ -84,7 +84,7 @@ function Contact() {
               <p className="font-mono text-xs uppercase tracking-[0.24em] text-muted">
                 Response
               </p>
-              <p className="mt-3 text-base font-medium text-text sm:text-lg">
+              <p className="mt-3 text-sm font-medium text-text sm:text-lg">
                 Usually responds within 24 hours.
               </p>
             </Card>

@@ -35,10 +35,10 @@ function Projects() {
                         ) : null}
                       </div>
                       <div>
-                        <h3 className="text-2xl font-semibold text-text sm:text-3xl">
+                        <h3 className="break-words text-2xl font-semibold leading-tight text-text sm:text-3xl">
                           {project.title}
                         </h3>
-                        <p className="mt-3 max-w-2xl text-sm leading-8 text-secondary sm:text-base">
+                        <p className="mt-3 max-w-2xl text-sm leading-7 text-secondary sm:text-base sm:leading-8">
                           {project.description}
                         </p>
                       </div>
@@ -100,9 +100,9 @@ function Projects() {
                       ))}
                     </div>
 
-                    <div className="mt-7 border border-border bg-surface p-4 font-mono text-xs text-secondary">
+                    <div className="mt-7 overflow-hidden border border-border bg-surface p-4 font-mono text-xs text-secondary">
                       {project.preview.map((line) => (
-                        <p key={line} className="break-words leading-6">
+                        <p key={line} className="break-all leading-6 sm:break-words">
                           {line}
                         </p>
                       ))}
